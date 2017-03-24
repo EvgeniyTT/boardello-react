@@ -1,0 +1,9 @@
+.boardList {
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+}
+
+.boardList ul {
+  list-style-type: none;
+}
