@@ -13,8 +13,7 @@ let nextID = 10;
 const boardsReducer = (state = initState, action) => {
   switch (action.type) {
     case 'ADD_BOARD':
-      const newState = Object.assign({}, state, { boards: [...state.boards, { id: nextID++, title: action.boardName, type: 'private' }] })
-      console.log(newState);
+      const newState = Object.assign({}, state, { boards: [...state.boards, { id: nextID++, title: action.board.boardName, type: action.board.boardType }] })
       return newState;
     case 'REMOVE_BOARD':
       return;

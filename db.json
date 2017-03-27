@@ -1,0 +1,7 @@
+{ 
+  "boards": [ 
+    {"id":0, "title":"a", "type": "public"},
+    {"id":1, "title":"b", "type": "private"},
+    {"id":2, "title":"c", "type": "public"}
+  ]
+}
