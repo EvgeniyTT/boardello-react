@@ -1,29 +1,19 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { createLogger } from 'redux-logger';
-import thunk from 'redux-thunk';
-import App from './App';
-import './index.css';
+import React from 'react'
+import { Provider } from 'react-redux'
+import { render } from 'react-dom'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { createLogger } from 'redux-logger'
+import thunk from 'redux-thunk'
+import promise from 'redux-promise-middleware'
+import App from './App'
+import boardsReducer from '../src/reducers'
+import axios from 'axios'
+import './index.css'
 
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import boardsReducer from '../src/reducers';
-import { Provider } from 'react-redux';
 
-const middlewares = applyMiddleware(createLogger(), thunk);
+const middlewares = applyMiddleware(createLogger(), thunk, promise())
 
-const store = createStore(boardsReducer, middlewares);
-
-fetch('http://localhost:3004/boards')
-  .then(response => {
-    console.log(response);
-    return response.json();
-   })
-  .then(boards => {
-    console.log(boards);
-  })
-  .catch( e => {
-    console.log('ERROR: ', e);
-  });
+const store = createStore(boardsReducer, middlewares)
 
 render(
   <Provider store={store}>
@@ -31,4 +21,3 @@ render(
   </Provider>,
   document.getElementById('root')
 );
-

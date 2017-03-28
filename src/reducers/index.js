@@ -1,25 +1,28 @@
 import { createStore, combineReducers } from 'redux';
 
 const initState = { 
-  boards: [ 
-    {id:0, title:'a', type: 'public'},
-    {id:1, title:'b', type: 'private'},
-    {id:2, title:'c', type: 'public'}
-    ]
+  boards: []
   }
-
-let nextID = 10;
 
 const boardsReducer = (state = initState, action) => {
   switch (action.type) {
+    case 'FETCH_BOARDS_FULFILLED':
+      return { boards: action.payload.data }
     case 'ADD_BOARD':
-      const newState = Object.assign({}, state, { boards: [...state.boards, { id: nextID++, title: action.board.boardName, type: action.board.boardType }] })
-      return newState;
+      console.log('ADD', action)
+      return state
+    case 'ADD_BOARD_FULFILLED':
+      console.log('FF', action)
+      const newstate = Object.assign({}, state, { boards: [...state.boards, action.payload.data] })
+      return newstate
+    case 'ADD_BOARD_REJECTED':
+      console.log('RE', action)
+      return state
     case 'REMOVE_BOARD':
-      return;
+      return
     default:
-      return state;
+      return state
   }
 };
 
-export default boardsReducer;
+export default boardsReducer
