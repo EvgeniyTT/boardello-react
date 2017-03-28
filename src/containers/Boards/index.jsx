@@ -1,23 +1,16 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import BoardList from '../../components/BoardList';
-import { addBoard, fetchBoards } from '../../actions';
-import './styles.css';
+import React from 'react'
+import { connect } from 'react-redux'
+import BoardList from '../../components/BoardList'
+import AddBoard from '../../components/AddBoard/index'
+import { addBoard } from '../../actions'
+import './styles.css'
 
-const BoardComponent = ({ boards, addBoard, fetchBoards }) => {
-  let input
-  let select
+const BoardComponent = ({ boards, addBoard }) => {
+
+
   return (
-    <div>
-      <div>
-        <input type="text" ref={(node) => { input = node }} />
-        <select ref={(node) => { select = node }}>
-          <option value="public">Public</option>
-          <option value="private">Private</option>
-        </select>
-        <button onClick={() => { addBoard(input.value, select.value) }}>Add A Board</button>
-        <button onClick={() => { fetchBoards() }}>Fetch Boards</button>
-      </div>
+    <div className="boards">
+      <AddBoard addBoard={ addBoard } />
       <BoardList type="public" boards={boards.filter(board => board.type === 'public')} />
       <BoardList type="private" boards={boards.filter(board => board.type === 'private')} />
     </div>
@@ -35,7 +28,6 @@ const mapDispatchToProps = dispatch => (
     addBoard: (boardName, boardType) => {
       dispatch(addBoard(boardName, boardType))
     },
-    fetchBoards: () => { dispatch(fetchBoards()) },
   }
 )
 

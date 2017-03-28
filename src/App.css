@@ -7,11 +7,16 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.App {
+  background-color: #bbb;
   padding: 20px;
   color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
 }
 
 .App-intro {

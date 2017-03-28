@@ -13,7 +13,7 @@ import Boards from '../src/containers/Boards/index';
 
 const App = () => (
     <Router>
-      <div>
+      <div className="App">
         <Route exact path="/" render={() => <h1>HI MAN</h1>} />
         <Route path="/todos" render={() => <TodoPanel title="todobaba" />} />
         <Route path="/boards" component={Boards} />

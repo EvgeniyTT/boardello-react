@@ -1,0 +1,11 @@
+.new-board button {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+button {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}

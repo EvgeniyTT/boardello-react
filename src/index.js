@@ -7,7 +7,7 @@ import thunk from 'redux-thunk'
 import promise from 'redux-promise-middleware'
 import App from './App'
 import boardsReducer from '../src/reducers'
-import axios from 'axios'
+import { fetchBoards } from './actions'
 import './index.css'
 
 
@@ -15,9 +15,11 @@ const middlewares = applyMiddleware(createLogger(), thunk, promise())
 
 const store = createStore(boardsReducer, middlewares)
 
+store.dispatch(fetchBoards())
+
 render(
   <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
-);
+)
