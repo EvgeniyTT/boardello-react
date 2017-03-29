@@ -1,0 +1,11 @@
+.board-panel {
+  border: black 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.board-panel a {
+  text-decoration: none;
+  color: white;
+}
