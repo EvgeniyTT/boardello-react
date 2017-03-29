@@ -1,11 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const TodoPanel = (props) => {
-  return (
+const TodoPanel = props => (
     <div>
       <span>TODO - {props.title}</span>
     </div>
   )
-}
 
 export default TodoPanel

@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Board = () => {
-  return (
+const Board = () => (
     <div>
       <span>BABAB</span>
     </div>
   )
-}
 
 export default Board

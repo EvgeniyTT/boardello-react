@@ -1,16 +1,10 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-
-
-import './App.css';
-
-import TodoPanel from '../src/components/TodoPanel';
-import Boards from '../src/containers/Boards/index';
-import Board from '../src/containers/Board/index';
-
-
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import TodoPanel from '../src/components/TodoPanel'
+import Boards from '../src/containers/Boards/index'
+import Board from '../src/containers/Board/index'
+import './App.css'
 
 const App = () => (
     <Router>
@@ -20,6 +14,6 @@ const App = () => (
         <Route exact path="/boards" component={Boards} />
       </div>
     </Router>
-);
+)
 
-export default App;
+export default App
