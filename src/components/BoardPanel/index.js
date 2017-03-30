@@ -7,6 +7,12 @@ const BoardPanel = props => (
     <Link to={`/boards/${props.id}`}>
       <div>
         <span>BOARD - {props.title}</span>
+        <button
+          onClick={event => {
+            event.preventDefault()
+            props.removeBoard(props.id)
+          }}>x
+        </button>
       </div>
     </Link>
   </div>

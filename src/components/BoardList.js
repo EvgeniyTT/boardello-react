@@ -1,11 +1,11 @@
 import React from 'react'
 import BoardPanel from './BoardPanel/index'
 
-const BoardList = ({ type, boards }) => (
+const BoardList = ({ type, boards, removeBoard }) => (
   <div className="boardList">
     <h1>{ type }</h1>
     <ul>
-      { boards.map(board => <li key={board.id}><BoardPanel title={board.title} id={board.id} /></li>) }
+      { boards.map(board => <li key={board.id}><BoardPanel title={board.title} id={board.id} removeBoard={removeBoard} /></li>) }
     </ul>
   </div>
 )

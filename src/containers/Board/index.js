@@ -1,8 +1,10 @@
 import React from 'react'
+import BoardColumn from '../../components/BoardColumn'
 
-const Board = () => (
+const Board = ({ title, columns }) => (
     <div>
-      <span>BABAB</span>
+      <h1>{title}</h1>
+      {columns.map(column => <BoardColumn column={column} />)}
     </div>
   )
 
