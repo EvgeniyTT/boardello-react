@@ -15,8 +15,6 @@ const middlewares = applyMiddleware(createLogger(), thunk, promise())
 
 const store = createStore(boardsReducer, middlewares)
 
-store.dispatch(fetchBoards())
-
 render(
   <Provider store={store}>
     <App />

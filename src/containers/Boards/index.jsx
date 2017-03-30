@@ -2,16 +2,25 @@ import React from 'react'
 import { connect } from 'react-redux'
 import BoardList from '../../components/BoardList'
 import AddBoard from '../../components/AddBoard/index'
-import { addBoard, removeBoard } from '../../actions'
+import { fetchBoards, addBoard, removeBoard } from '../../actions'
 import './styles.css'
 
-const BoardComponent = ({ boards, addBoard, removeBoard }) => (
-    <div className="boards">
-      <AddBoard addBoard={ addBoard } />
-      <BoardList type="public" boards={boards.filter(board => board.type === 'public')} removeBoard={removeBoard} />
-      <BoardList type="private" boards={boards.filter(board => board.type === 'private')} removeBoard={removeBoard} />
-    </div>
-  )
+class BoardComponent extends React.Component {
+
+  componentWillMount() {
+    this.props.fetchBoards()
+  }
+
+  render() {
+    return (
+      <div className="boards">
+        <AddBoard addBoard={ this.props.addBoard } />
+        <BoardList type="public" boards={this.props.boards.filter(board => board.type === 'public')} removeBoard={this.props.removeBoard} />
+        <BoardList type="private" boards={this.props.boards.filter(board => board.type === 'private')} removeBoard={this.props.removeBoard} />
+      </div>
+    )
+  }
+}
 
 const mapStateToProps = state => (
   {
@@ -21,6 +30,9 @@ const mapStateToProps = state => (
 
 const mapDispatchToProps = dispatch => (
   {
+    fetchBoards: () => {
+      dispatch(fetchBoards())
+    },
     addBoard: (boardName, boardType) => {
       dispatch(addBoard(boardName, boardType))
     },

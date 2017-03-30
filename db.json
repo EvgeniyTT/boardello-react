@@ -1,39 +1,10 @@
 {
   "boards": [
     {
-      "id": 0,
-      "title": "a",
-      "type": "public"
-    },
-    {
-      "id": 2,
-      "title": "c",
-      "type": "public"
-    },
-    {
-      "title": "xdgxdggg",
+      "title": "llll",
       "type": "private",
-      "id": 29
-    },
-    {
-      "title": "xdgxdgggвмч",
-      "type": "private",
-      "id": 30
-    },
-    {
-      "title": "еоае",
-      "type": "public",
-      "id": 31
-    },
-    {
-      "title": "bewBoard",
-      "type": "public",
-      "id": 32
-    },
-    {
-      "title": "Another Board",
-      "type": "private",
-      "id": 33
+      "columns": [],
+      "id": 1
     }
   ]
 }
