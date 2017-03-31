@@ -1,10 +1,78 @@
 {
   "boards": [
     {
-      "title": "llll",
-      "type": "private",
-      "columns": [],
-      "id": 1
+      "id": 1,
+      "columns": [
+        {
+          "title": "column",
+          "id": 1,
+          "boardId": 1
+        },
+        {
+          "title": "l2222",
+          "id": 2,
+          "boardId": 1
+        },
+        {
+          "title": "New Column"
+        }
+      ]
+    }
+  ],
+  "columns": [
+    {
+      "title": "column",
+      "id": 1,
+      "boardId": 1
+    },
+    {
+      "title": "l2222",
+      "id": 2,
+      "boardId": 1
+    },
+    {
+      "title": "BABAB",
+      "id": 3,
+      "boardId": 2
+    },
+    {
+      "column": {
+        "title": "newColumn",
+        "boardId": "1"
+      },
+      "id": 4
+    },
+    {
+      "column": {
+        "title": "newColumn",
+        "boardId": "1"
+      },
+      "id": 5
+    },
+    {
+      "title": "newColumn",
+      "boardId": "1",
+      "id": 6
+    },
+    {
+      "title": "newColumn",
+      "boardId": "1",
+      "id": 7
+    },
+    {
+      "title": "newColumn",
+      "boardId": "1",
+      "id": 8
+    },
+    {
+      "title": "newColumn",
+      "boardId": "1",
+      "id": 9
+    },
+    {
+      "title": "newColumn",
+      "boardId": "1",
+      "id": 10
     }
   ]
 }

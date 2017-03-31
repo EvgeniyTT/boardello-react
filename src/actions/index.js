@@ -18,11 +18,24 @@ export const fetchBoards = () => ({
   payload: axios.get('http://localhost:3001/boards'),
 })
 
-export const fetchBoard = id => {
-  console.log('ID:', id)
+// export const fetchBoard = id => ({
+//   type: 'FETCH_BOARD',
+//   payload: axios.get(`http://localhost:3001/boards/${id}`),
+// })
+
+export const fetchColumns = boardId => ({
+  type: 'FETCH_COLUMNS',
+  payload: axios.get(`http://localhost:3001/columns?boardId=${boardId}`),
+})
+
+export const addColumn = column => {
+  console.log('column:', column)
   return {
-    type: 'FETCH_BOARD',
-    payload: axios.get(`http://localhost:3001/boards/${id}`),
+    type: 'ADD_COLUMN',
+    payload: axios.post('http://localhost:3001/columns/',
+      column,
+      { headers: { 'Content-Type': 'application/json' } }
+    ),
   }
 }
 
