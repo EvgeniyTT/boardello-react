@@ -1,22 +1,52 @@
 {
   "boards": [
     {
-      "id": 1,
-      "columns": [
-        {
-          "title": "column",
-          "id": 1,
-          "boardId": 1
-        },
-        {
-          "title": "l2222",
-          "id": 2,
-          "boardId": 1
-        },
-        {
-          "title": "New Column"
-        }
-      ]
+      "title": "dsvsd",
+      "type": "private",
+      "columns": [],
+      "id": 4
+    },
+    {
+      "title": "dvsdv",
+      "type": "public",
+      "columns": [],
+      "id": 5
+    },
+    {
+      "title": "sdvds",
+      "type": "private",
+      "columns": [],
+      "id": 6
+    },
+    {
+      "title": "ne ",
+      "type": "public",
+      "columns": [],
+      "id": 7
+    },
+    {
+      "title": "dsgs",
+      "type": "public",
+      "columns": [],
+      "id": 8
+    },
+    {
+      "title": "dgs",
+      "type": "private",
+      "columns": [],
+      "id": 9
+    },
+    {
+      "title": "the one",
+      "type": "private",
+      "columns": [],
+      "id": 10
+    },
+    {
+      "title": "THE ONE",
+      "type": "public",
+      "columns": [],
+      "id": 11
     }
   ],
   "columns": [
@@ -29,11 +59,6 @@
       "title": "l2222",
       "id": 2,
       "boardId": 1
-    },
-    {
-      "title": "BABAB",
-      "id": 3,
-      "boardId": 2
     },
     {
       "column": {
@@ -73,6 +98,66 @@
       "title": "newColumn",
       "boardId": "1",
       "id": 10
+    },
+    {
+      "title": "newColumn",
+      "boardId": "5",
+      "id": 11
+    },
+    {
+      "title": "newColumn",
+      "boardId": "5",
+      "id": 12
+    },
+    {
+      "title": "newColumn",
+      "boardId": "5",
+      "id": 13
+    },
+    {
+      "title": "newColumn",
+      "boardId": "5",
+      "id": 14
+    },
+    {
+      "title": "newColumn",
+      "boardId": "11",
+      "id": 15
+    },
+    {
+      "title": "newColumn",
+      "boardId": "11",
+      "id": 16
+    },
+    {
+      "title": "newColumn",
+      "boardId": "11",
+      "id": 17
+    },
+    {
+      "title": "newColumn",
+      "boardId": 11,
+      "id": 18
+    }
+  ],
+  "tasks": [
+    {
+      "title": "newTask",
+      "boardId": 11,
+      "columnId": 15,
+      "id": 1
+    },
+    {
+      "title": "newTask",
+      "boardId": 11,
+      "columnId": 16,
+      "id": 2
+    },
+    {
+      "title": "newTask",
+      "boardId": 11,
+      "columnId": 16,
+      "id": 3
     }
   ]
 }

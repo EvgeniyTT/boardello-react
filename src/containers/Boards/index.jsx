@@ -33,8 +33,8 @@ const mapDispatchToProps = dispatch => (
     fetchBoards: () => {
       dispatch(fetchBoards())
     },
-    addBoard: (boardName, boardType) => {
-      dispatch(addBoard(boardName, boardType))
+    addBoard: (title, type) => {
+      dispatch(addBoard(title, type))
     },
     removeBoard: boardId => {
       dispatch(removeBoard(boardId))
