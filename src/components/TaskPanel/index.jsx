@@ -3,8 +3,8 @@ import './styles.css'
 
 const TaskPanel = ({ title }) => {
   return (
-    <div>
-      <span>TASK - {title}</span>
+    <div className="taskPanel">
+      <span>{title}</span>
     </div>
   )
 }

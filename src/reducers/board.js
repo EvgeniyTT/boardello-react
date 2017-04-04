@@ -2,12 +2,17 @@
 const column = (state = {}, action) => {
   switch (action.type) {
     case 'FETCH_TASKS_FULFILLED':
-      console.log('STATE: ', state.id)
-      console.log('ACTION: ', action.payload.data[0].columnId)
-      if (action.payload.data.length > 0 && state.id != action.payload.data[0].columnId) {
-        return state
+      if (action.payload.data.length > 0) {
+        if (state.id == action.payload.data[0].columnId) {
+          return Object.assign({}, state, { tasks: action.payload.data })
+        }
       }
-      return Object.assign({}, state, { tasks: action.payload.data })
+      return state
+    case 'ADD_TASK_FULFILLED':
+      if (state.id == action.payload.data.columnId) {
+        return Object.assign({}, state, { tasks: [...state.tasks, action.payload.data] })
+      }
+      return state
     default:
       return state
   }

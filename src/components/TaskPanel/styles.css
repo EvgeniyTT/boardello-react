@@ -1,0 +1,6 @@
+.taskPanel {
+  border: solid 1px black;
+  width: 180px;
+  height: 20px;
+  margin: 10px;
+}
