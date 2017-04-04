@@ -1,5 +1,5 @@
 import React from 'react'
-import BoardPanel from './BoardPanel/index'
+import BoardPanel from '../BoardPanel/index'
 
 const BoardList = ({ type, boards, removeBoard }) => (
   <div className="boardList">

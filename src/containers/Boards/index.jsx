@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import BoardList from '../../components/BoardList'
+import BoardList from '../../components/BoardList/index'
 import AddBoard from '../../components/AddBoard/index'
 import { fetchBoards, addBoard, removeBoard } from '../../actions'
 import './styles.css'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchBoard, fetchColumns, fetchTasks, addColumn, addTask } from '../../actions'
+import { fetchBoard, fetchColumns, addColumn } from '../../actions'
 import Column from '../Column/index.jsx'
 import './styles.css'
 
