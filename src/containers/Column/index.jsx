@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchTasks, addTask } from '../../actions'
+import { fetchTasks, addTask, removeTask } from '../../actions'
 import TaskPanel from '../../components/TaskPanel/index.jsx'
 import './styles.css'
 
@@ -12,10 +12,9 @@ class ColumnComponent extends React.Component {
   }
 
   render() {
-    console.log('COLUMN IN COMPONENT: ', this.props.column)
-    console.log('isFetchingTasks IN COMPONENT: ', this.props.column.isFetchingTasks)
-    const content = this.props.column.isFetchingTasks ? <span>PENDING</span> : 
-      this.props.column.tasks ? this.props.column.tasks.map(task => <TaskPanel key={task.id} title={task.title} />) : []
+    const content = this.props.column.isFetchingTasks
+      ? <span>PENDING</span>
+      : this.props.column.tasks.map(task => <TaskPanel key={task.id} title={task.title} removeTask={() => { this.props.removeTask(task.id) }} />)
 
     return (
       <div className="column">
@@ -35,8 +34,11 @@ const mapDispatchToProps = dispatch => (
     fetchTasks: (boardId, columnId) => {
       dispatch(fetchTasks(boardId, columnId))
     },
-    addTask: task => {
-      dispatch(addTask(task))
+    addTask: (boardId, columnId) => {
+      dispatch(addTask(boardId, columnId))
+    },
+    removeTask: taskId => {
+      dispatch(removeTask(taskId))
     },
   }
 )
@@ -44,6 +46,7 @@ const mapDispatchToProps = dispatch => (
 ColumnComponent.propTypes = {
   fetchTasks: React.PropTypes.func,
   addTask: React.PropTypes.func,
+  removeTask: React.PropTypes.func,
   column: React.PropTypes.object,
   boardId: React.PropTypes.number,
   pending: React.PropTypes.bool,

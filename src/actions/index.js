@@ -53,3 +53,8 @@ export const addTask = (boardId, columnId) => ({
     { headers: { 'Content-Type': 'application/json' } }
   ),
 })
+
+export const removeTask = taskId => ({
+  type: 'REMOVE_TASK',
+  payload: axios.delete(`http://localhost:3001/tasks/${taskId}`),
+})
