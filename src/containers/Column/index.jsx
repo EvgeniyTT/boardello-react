@@ -11,15 +11,14 @@ class ColumnComponent extends React.Component {
   }
 
   render() {
+    const content = this.props.pending ? <span>PENDING</span> : this.props.column.tasks.map(task => <TaskPanel key={task.id} title={task.title} />)
+
     return (
       <div className="column">
         <span>{ this.props.column.title }</span>
         <button onClick={ () => { this.props.addTask(this.props.boardId, this.props.column.id) } }>Add Task</button>
         <div className="tasks">
-          { this.props.column.tasks
-            ? this.props.column.tasks.map(task => <TaskPanel key={task.id} title={task.title} />)
-            : []
-          }
+          { content }
         </div>
       </div>
     )
@@ -37,6 +36,14 @@ const mapDispatchToProps = dispatch => (
     },
   }
 )
+
+ColumnComponent.propTypes = {
+  fetchTasks: React.PropTypes.func,
+  addTask: React.PropTypes.func,
+  column: React.PropTypes.object,
+  boardId: React.PropTypes.number,
+  pending: React.PropTypes.bool,
+}
 
 const Column = connect(null, mapDispatchToProps)(ColumnComponent)
 

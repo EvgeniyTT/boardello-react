@@ -18,4 +18,10 @@ const BoardPanel = props => (
   </div>
 )
 
+BoardPanel.propTypes = {
+  removeBoard: React.PropTypes.func,
+  id: React.PropTypes.number,
+  title: React.PropTypes.string,
+}
+
 export default BoardPanel

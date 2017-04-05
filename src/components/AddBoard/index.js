@@ -22,4 +22,8 @@ const AddBoard = ({ addBoard }) => {
   )
 }
 
+AddBoard.propTypes = {
+  addBoard: React.PropTypes.func,
+}
+
 export default AddBoard

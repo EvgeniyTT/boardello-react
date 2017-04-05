@@ -52,6 +52,14 @@ const mapDispatchToProps = dispatch => (
   }
 )
 
+BoardComponent.propTypes = {
+  fetchBoard: React.PropTypes.func,
+  fetchColumns: React.PropTypes.func,
+  addColumn: React.PropTypes.func,
+  board: React.PropTypes.object,
+  location: React.PropTypes.object,
+}
+
 const Board = connect(mapStateToProps, mapDispatchToProps)(BoardComponent)
 
 export default Board

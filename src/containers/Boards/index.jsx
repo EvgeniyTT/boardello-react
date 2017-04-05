@@ -42,6 +42,13 @@ const mapDispatchToProps = dispatch => (
   }
 )
 
+BoardComponent.propTypes = {
+  fetchBoards: React.PropTypes.func,
+  addBoard: React.PropTypes.func,
+  removeBoard: React.PropTypes.func,
+  boards: React.PropTypes.array,
+}
+
 const Boards = connect(mapStateToProps, mapDispatchToProps)(BoardComponent)
 
 export default Boards

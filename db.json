@@ -13,12 +13,6 @@
       "id": 5
     },
     {
-      "title": "sdvds",
-      "type": "private",
-      "columns": [],
-      "id": 6
-    },
-    {
       "title": "ne ",
       "type": "public",
       "columns": [],
@@ -29,12 +23,6 @@
       "type": "public",
       "columns": [],
       "id": 8
-    },
-    {
-      "title": "dgs",
-      "type": "private",
-      "columns": [],
-      "id": 9
     },
     {
       "title": "the one",
@@ -51,16 +39,6 @@
   ],
   "columns": [
     {
-      "title": "column",
-      "id": 1,
-      "boardId": 1
-    },
-    {
-      "title": "l2222",
-      "id": 2,
-      "boardId": 1
-    },
-    {
       "column": {
         "title": "newColumn",
         "boardId": "1"
@@ -73,31 +51,6 @@
         "boardId": "1"
       },
       "id": 5
-    },
-    {
-      "title": "newColumn",
-      "boardId": "1",
-      "id": 6
-    },
-    {
-      "title": "newColumn",
-      "boardId": "1",
-      "id": 7
-    },
-    {
-      "title": "newColumn",
-      "boardId": "1",
-      "id": 8
-    },
-    {
-      "title": "newColumn",
-      "boardId": "1",
-      "id": 9
-    },
-    {
-      "title": "newColumn",
-      "boardId": "1",
-      "id": 10
     },
     {
       "title": "newColumn",

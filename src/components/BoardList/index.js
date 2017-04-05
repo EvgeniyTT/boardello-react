@@ -10,4 +10,10 @@ const BoardList = ({ type, boards, removeBoard }) => (
   </div>
 )
 
+BoardList.propTypes = {
+  removeBoard: React.PropTypes.func,
+  boards: React.PropTypes.array,
+  type: React.PropTypes.string,
+}
+
 export default BoardList
