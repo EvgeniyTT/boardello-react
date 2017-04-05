@@ -39,20 +39,6 @@
   ],
   "columns": [
     {
-      "column": {
-        "title": "newColumn",
-        "boardId": "1"
-      },
-      "id": 4
-    },
-    {
-      "column": {
-        "title": "newColumn",
-        "boardId": "1"
-      },
-      "id": 5
-    },
-    {
       "title": "newColumn",
       "boardId": "5",
       "id": 11
@@ -370,6 +356,36 @@
       "boardId": 11,
       "title": "newTask",
       "id": 35
+    },
+    {
+      "boardId": 11,
+      "title": "newTask",
+      "id": 36
+    },
+    {
+      "boardId": 11,
+      "title": "newTask",
+      "id": 37
+    },
+    {
+      "boardId": 11,
+      "title": "newTask",
+      "id": 38
+    },
+    {
+      "boardId": 11,
+      "title": "newTask",
+      "id": 39
+    },
+    {
+      "boardId": 11,
+      "title": "newTask",
+      "id": 40
+    },
+    {
+      "boardId": 11,
+      "title": "newTask",
+      "id": 41
     }
   ]
 }

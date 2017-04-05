@@ -8,10 +8,14 @@ class ColumnComponent extends React.Component {
 
   componentWillMount() {
     this.props.fetchTasks(this.props.boardId, this.props.column.id)
+    this.props.column.isFetchingTasks = true
   }
 
   render() {
-    const content = this.props.pending ? <span>PENDING</span> : this.props.column.tasks.map(task => <TaskPanel key={task.id} title={task.title} />)
+    console.log('COLUMN IN COMPONENT: ', this.props.column)
+    console.log('isFetchingTasks IN COMPONENT: ', this.props.column.isFetchingTasks)
+    const content = this.props.column.isFetchingTasks ? <span>PENDING</span> : 
+      this.props.column.tasks ? this.props.column.tasks.map(task => <TaskPanel key={task.id} title={task.title} />) : []
 
     return (
       <div className="column">

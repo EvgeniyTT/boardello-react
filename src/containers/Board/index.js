@@ -20,8 +20,8 @@ class BoardComponent extends React.Component {
         { this.props.board.columns
             ? this.props.board.columns.map(column =>
               <Column
-                key={column.id}
-                boardId={this.props.board.id}
+                key={+column.id}
+                boardId={+this.props.board.id}
                 column={column}
               />)
             : []

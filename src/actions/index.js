@@ -38,7 +38,12 @@ export const addColumn = boardId => ({
 
 export const fetchTasks = (boardId, columnId) => ({
   type: 'FETCH_TASKS',
-  payload: axios.get(`http://localhost:3001/tasks/?boardId=${boardId}&columnId=${columnId}`),
+  boardId,
+  columnId,
+  payload: {
+    baba: 'baba',
+    promise: axios.get(`http://localhost:3001/tasks/?boardId=${boardId}&columnId=${columnId}`)
+  },
 })
 
 export const addTask = (boardId, columnId) => ({
