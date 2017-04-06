@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import BoardPanel from '../BoardPanel/index'
 
 const BoardList = ({ type, boards, removeBoard }) => (
@@ -11,9 +11,9 @@ const BoardList = ({ type, boards, removeBoard }) => (
 )
 
 BoardList.propTypes = {
-  removeBoard: React.PropTypes.func,
-  boards: React.PropTypes.array,
-  type: React.PropTypes.string,
+  removeBoard: PropTypes.func,
+  boards: PropTypes.array,
+  type: PropTypes.string,
 }
 
 export default BoardList

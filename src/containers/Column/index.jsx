@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchTasks, addTask, removeTask } from '../../actions'
 import TaskPanel from '../../components/TaskPanel/index.jsx'
@@ -29,27 +29,19 @@ class ColumnComponent extends React.Component {
 
 }
 
-const mapDispatchToProps = dispatch => (
-  {
-    fetchTasks: (boardId, columnId) => {
-      dispatch(fetchTasks(boardId, columnId))
-    },
-    addTask: (boardId, columnId) => {
-      dispatch(addTask(boardId, columnId))
-    },
-    removeTask: taskId => {
-      dispatch(removeTask(taskId))
-    },
-  }
-)
+const mapDispatchToProps = {
+  fetchTasks,
+  addTask,
+  removeTask,
+}
 
 ColumnComponent.propTypes = {
-  fetchTasks: React.PropTypes.func,
-  addTask: React.PropTypes.func,
-  removeTask: React.PropTypes.func,
-  column: React.PropTypes.object,
-  boardId: React.PropTypes.number,
-  pending: React.PropTypes.bool,
+  fetchTasks: PropTypes.func,
+  addTask: PropTypes.func,
+  removeTask: PropTypes.func,
+  column: PropTypes.object,
+  boardId: PropTypes.number,
+  pending: PropTypes.bool,
 }
 
 const Column = connect(null, mapDispatchToProps)(ColumnComponent)

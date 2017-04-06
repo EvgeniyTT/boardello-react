@@ -12,18 +12,7 @@ const column = (state = {}, action) => {
       }
       return state
     case 'REMOVE_TASK_FULFILLED':
-      console.log('PAYLOAD', action.payload)
-      console.log('state.id', state.id)
-      console.log('action.payload.data.columnId', action.payload.data.columnId)
-      if (state.id == action.payload.data.columnId) {
-        return { ...state, tasks: state.tasks.filter(task => {
-          console.log('TASKID: ', task.id)
-          console.log('TASKID: ', action.payload.config.url.split('/').pop())
-          task.id != action.payload.config.url.split('/').pop()
-        })
-      }
-      }
-      return state
+      return { ...state, tasks: state.tasks.filter(task => task.id != action.payload.config.url.split('/').pop()) }
     default:
       return state
   }

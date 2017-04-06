@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchBoard, fetchColumns, addColumn } from '../../actions'
 import Column from '../Column/index.jsx'
@@ -16,7 +16,6 @@ class BoardComponent extends React.Component {
     return (
       <div className="board">
         <h1>TITLE - {this.props.board.title}</h1>
-        <button onClick={ () => { this.props.addColumn(this.props.board.id) }}>Add Column</button>
         { this.props.board.columns
             ? this.props.board.columns.map(column =>
               <Column
@@ -26,6 +25,7 @@ class BoardComponent extends React.Component {
               />)
             : []
         }
+        <button onClick={ () => { this.props.addColumn(this.props.board.id) }}>Add Column</button>
       </div>
     )
   }
@@ -38,26 +38,18 @@ const mapStateToProps = state => (
   }
 )
 
-const mapDispatchToProps = dispatch => (
-  {
-    fetchBoard: id => {
-      dispatch(fetchBoard(id))
-    },
-    fetchColumns: id => {
-      dispatch(fetchColumns(id))
-    },
-    addColumn: column => {
-      dispatch(addColumn(column))
-    },
-  }
-)
+const mapDispatchToProps = {
+  fetchBoard,
+  fetchColumns,
+  addColumn,
+}
 
 BoardComponent.propTypes = {
-  fetchBoard: React.PropTypes.func,
-  fetchColumns: React.PropTypes.func,
-  addColumn: React.PropTypes.func,
-  board: React.PropTypes.object,
-  location: React.PropTypes.object,
+  fetchBoard: PropTypes.func,
+  fetchColumns: PropTypes.func,
+  addColumn: PropTypes.func,
+  board: PropTypes.object,
+  location: PropTypes.object,
 }
 
 const Board = connect(mapStateToProps, mapDispatchToProps)(BoardComponent)

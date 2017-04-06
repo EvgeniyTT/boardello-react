@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import BoardList from '../../components/BoardList/index'
 import AddBoard from '../../components/AddBoard/index'
@@ -28,25 +28,18 @@ const mapStateToProps = state => (
   }
 )
 
-const mapDispatchToProps = dispatch => (
-  {
-    fetchBoards: () => {
-      dispatch(fetchBoards())
-    },
-    addBoard: (title, type) => {
-      dispatch(addBoard(title, type))
-    },
-    removeBoard: boardId => {
-      dispatch(removeBoard(boardId))
-    },
-  }
-)
+const mapDispatchToProps = {
+  fetchBoards,
+  addBoard,
+  removeBoard,
+}
+
 
 BoardComponent.propTypes = {
-  fetchBoards: React.PropTypes.func,
-  addBoard: React.PropTypes.func,
-  removeBoard: React.PropTypes.func,
-  boards: React.PropTypes.array,
+  fetchBoards: PropTypes.func,
+  addBoard: PropTypes.func,
+  removeBoard: PropTypes.func,
+  boards: PropTypes.array,
 }
 
 const Boards = connect(mapStateToProps, mapDispatchToProps)(BoardComponent)

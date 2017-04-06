@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import './styles.css'
 
 const AddBoard = ({ addBoard }) => {
@@ -23,7 +23,7 @@ const AddBoard = ({ addBoard }) => {
 }
 
 AddBoard.propTypes = {
-  addBoard: React.PropTypes.func,
+  addBoard: PropTypes.func,
 }
 
 export default AddBoard

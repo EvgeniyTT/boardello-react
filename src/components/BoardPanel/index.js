@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Link } from 'react-router-dom'
 import './styles.css'
 
@@ -8,6 +8,7 @@ const BoardPanel = props => (
       <div>
         <span>BOARD - {props.title}</span>
         <button
+          className="small-btn"
           onClick={event => {
             event.preventDefault()
             props.removeBoard(props.id)
@@ -19,9 +20,9 @@ const BoardPanel = props => (
 )
 
 BoardPanel.propTypes = {
-  removeBoard: React.PropTypes.func,
-  id: React.PropTypes.number,
-  title: React.PropTypes.string,
+  removeBoard: PropTypes.func,
+  id: PropTypes.number,
+  title: PropTypes.string,
 }
 
 export default BoardPanel

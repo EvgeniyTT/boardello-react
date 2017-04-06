@@ -11,3 +11,13 @@ body {
 .completed {
   text-decoration: line-through;
 }
+
+
+.small-btn {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
