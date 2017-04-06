@@ -60,12 +60,17 @@
       "boardId": 12,
       "title": "newColumn",
       "id": 7
+    },
+    {
+      "boardId": 12,
+      "title": "newColumn",
+      "id": 8
     }
   ],
   "tasks": [
     {
       "boardId": 11,
-      "columnId": 1,
+      "columnId": 2,
       "title": "newTask",
       "id": 1
     },
@@ -121,61 +126,13 @@
       "boardId": 12,
       "columnId": 6,
       "title": "newTask",
-      "id": 30
-    },
-    {
-      "boardId": 12,
-      "columnId": 6,
-      "title": "newTask",
       "id": 31
     },
     {
       "boardId": 12,
       "columnId": 7,
       "title": "newTask",
-      "id": 35
-    },
-    {
-      "boardId": 12,
-      "columnId": 7,
-      "title": "newTask",
-      "id": 36
-    },
-    {
-      "boardId": 12,
-      "columnId": 7,
-      "title": "newTask",
-      "id": 37
-    },
-    {
-      "boardId": 12,
-      "columnId": 7,
-      "title": "newTask",
-      "id": 38
-    },
-    {
-      "boardId": 12,
-      "columnId": 7,
-      "title": "newTask",
       "id": 39
-    },
-    {
-      "boardId": 12,
-      "columnId": 7,
-      "title": "newTask",
-      "id": 40
-    },
-    {
-      "boardId": 12,
-      "columnId": 7,
-      "title": "newTask",
-      "id": 41
-    },
-    {
-      "boardId": 12,
-      "columnId": 7,
-      "title": "newTask",
-      "id": 42
     }
   ]
 }

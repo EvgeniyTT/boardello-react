@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
+import { DragDropContext } from 'react-dnd'
+import HTML5Backend from 'react-dnd-html5-backend'
 import { fetchBoard, fetchColumns, addColumn } from '../../actions'
 import Column from '../Column/index.jsx'
 import './styles.css'
@@ -52,6 +54,7 @@ BoardComponent.propTypes = {
   location: PropTypes.object,
 }
 
-const Board = connect(mapStateToProps, mapDispatchToProps)(BoardComponent)
+const BoardDnD = DragDropContext(HTML5Backend)(BoardComponent)
+const Board = connect(mapStateToProps, mapDispatchToProps)(BoardDnD)
 
 export default Board
