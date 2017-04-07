@@ -13,6 +13,13 @@ const column = (state = {}, action) => {
       return state
     case 'REMOVE_TASK_FULFILLED':
       return { ...state, tasks: state.tasks.filter(task => task.id != action.payload.config.url.split('/').pop()) }
+    case 'MOVE_TASK_FULFILLED':
+      // add task to the new column
+      if (state.id == action.payload.data.columnId) {
+        return { ...state, tasks: [...state.tasks, action.payload.data] }
+      }
+      // move task from column if it was there
+      return { ...state, tasks: state.tasks.filter(task => task.id != action.payload.config.url.split('/').pop()) }
     default:
       return state
   }
@@ -31,6 +38,8 @@ const board = (state = { columns: [] }, action) => {
     case 'ADD_TASK_FULFILLED':
       return { ...state, columns: state.columns.map(c => column(c, action)) }
     case 'REMOVE_TASK_FULFILLED':
+      return { ...state, columns: state.columns.map(c => column(c, action)) }
+    case 'MOVE_TASK_FULFILLED':
       return { ...state, columns: state.columns.map(c => column(c, action)) }
     case 'FETCH_TASKS':
       return { ...state, columns: state.columns.map(c => column(c, action)) }

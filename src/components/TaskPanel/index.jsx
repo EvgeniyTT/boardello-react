@@ -5,7 +5,6 @@ import './styles.css'
 
 const tasktSource = {
   beginDrag(props) {
-    console.log('TASK PROPS: ', props)
     return { taskId: props.id }
   },
 }

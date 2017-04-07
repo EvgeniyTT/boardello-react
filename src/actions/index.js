@@ -59,7 +59,10 @@ export const removeTask = taskId => ({
   payload: axios.delete(`http://localhost:3001/tasks/${taskId}`),
 })
 
-export const moveTask = taskId => ({
-  type: 'REMOVE_TASK',
-  payload: axios.delete(`http://localhost:3001/tasks/${taskId}`),
+export const moveTask = (taskId, columnId) => ({
+  type: 'MOVE_TASK',
+  payload: axios.patch(`http://localhost:3001/tasks/${taskId}`,
+  { columnId },
+  { headers: { 'Content-Type': 'application/json' } }
+  ),
 })

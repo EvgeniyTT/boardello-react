@@ -112,13 +112,13 @@
     },
     {
       "boardId": 12,
-      "columnId": 7,
+      "columnId": 6,
       "title": "newTask",
       "id": 15
     },
     {
       "boardId": 12,
-      "columnId": 6,
+      "columnId": 7,
       "title": "newTask",
       "id": 29
     },

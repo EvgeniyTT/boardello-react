@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { DragDropContext } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
-import { fetchBoard, fetchColumns, addColumn } from '../../actions'
+import { fetchBoard, fetchColumns, addColumn, moveTask } from '../../actions'
 import Column from '../Column/index.jsx'
 import './styles.css'
 
@@ -24,6 +24,7 @@ class BoardComponent extends React.Component {
                 key={+column.id}
                 boardId={+this.props.board.id}
                 column={column}
+                moveTask={this.props.moveTask}
               />)
             : []
         }
@@ -44,12 +45,14 @@ const mapDispatchToProps = {
   fetchBoard,
   fetchColumns,
   addColumn,
+  moveTask,
 }
 
 BoardComponent.propTypes = {
   fetchBoard: PropTypes.func,
   fetchColumns: PropTypes.func,
   addColumn: PropTypes.func,
+  moveTask: PropTypes.func,
   board: PropTypes.object,
   location: PropTypes.object,
 }
