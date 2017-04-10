@@ -18,7 +18,7 @@ const column = (state = {}, action) => {
       if (state.id == action.payload.data.columnId) {
         return { ...state, tasks: [...state.tasks, action.payload.data] }
       }
-      // move task from column if it was there
+      // remove task from column if it was there
       return { ...state, tasks: state.tasks.filter(task => task.id != action.payload.config.url.split('/').pop()) }
     default:
       return state

@@ -1,9 +1,7 @@
 .column {
-  float: left;
-  width: 200px;
   min-height: 200px;
   background-color:  #aba;
-  display: inline-block;
   margin: 5px;
   border: solid 1px black;
+  flex: 1 1 100%;
 }

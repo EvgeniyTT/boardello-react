@@ -1,3 +1,13 @@
 .board {
-  white-space: pre;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+
+@media (max-width: 600px) {
+  .board {
+      flex-direction: column;
+  }
 }
