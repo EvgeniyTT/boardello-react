@@ -14,6 +14,10 @@ const column = (state = {}, action) => {
     case 'REMOVE_TASK_FULFILLED':
       return { ...state, tasks: state.tasks.filter(task => task.id != action.payload.config.url.split('/').pop()) }
     case 'MOVE_TASK_FULFILLED':
+      // if move to the same column
+      if (state.tasks.filter(task => task.id == action.payload.config.url.split('/').pop()).length > 0 && state.id == action.payload.data.columnId) {
+        return state
+      }
       // add task to the new column
       if (state.id == action.payload.data.columnId) {
         return { ...state, tasks: [...state.tasks, action.payload.data] }
