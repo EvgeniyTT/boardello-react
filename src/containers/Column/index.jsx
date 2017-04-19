@@ -22,19 +22,23 @@ function collect(cnct, monitor) {
 class ColumnComponent extends React.Component {
 
   componentWillMount() {
+    this.up = false
     this.props.fetchTasks(this.props.boardId, this.props.column.id)
     this.props.column.isFetchingTasks = true
+  }
+  componentDidMount() {
+    this.up = true
   }
 
   render() {
     const { connectDropTarget } = this.props
-    console.log('GETCHING: ', this.props.column.isFetchingTasks)
     const content = this.props.column.isFetchingTasks
       ? <span>PENDING</span>
       : this.props.column.tasks.map(task => <TaskPanel key={task.id} id={task.id} title={task.title} removeTask={this.props.removeTask} />)
 
+    this.columnClass = `column ${this.up && 'up'}`
     return connectDropTarget(
-      <div className="column">
+      <div className={ this.columnClass }>
         <span>{ this.props.column.title }</span>
         <button onClick={ () => { this.props.addTask(this.props.boardId, this.props.column.id) } }>Add Task</button>
         <div className="tasks">
