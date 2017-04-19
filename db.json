@@ -65,6 +65,36 @@
       "boardId": 12,
       "title": "newColumn",
       "id": 8
+    },
+    {
+      "boardId": 12,
+      "title": "newColumn",
+      "id": 9
+    },
+    {
+      "boardId": 12,
+      "title": "newColumn",
+      "id": 10
+    },
+    {
+      "boardId": 12,
+      "title": "newColumn",
+      "id": 11
+    },
+    {
+      "boardId": 12,
+      "title": "newColumn",
+      "id": 12
+    },
+    {
+      "boardId": 12,
+      "title": "newColumn",
+      "id": 13
+    },
+    {
+      "boardId": 11,
+      "title": "newColumn",
+      "id": 14
     }
   ],
   "tasks": [
@@ -112,7 +142,7 @@
     },
     {
       "boardId": 12,
-      "columnId": 6,
+      "columnId": 8,
       "title": "newTask",
       "id": 15
     },
@@ -124,15 +154,27 @@
     },
     {
       "boardId": 12,
-      "columnId": 6,
+      "columnId": 10,
       "title": "newTask",
       "id": 31
     },
     {
       "boardId": 12,
-      "columnId": 7,
+      "columnId": 9,
       "title": "newTask",
       "id": 39
+    },
+    {
+      "boardId": 12,
+      "columnId": 8,
+      "title": "newTask",
+      "id": 40
+    },
+    {
+      "boardId": 12,
+      "columnId": 6,
+      "title": "newTask",
+      "id": 41
     }
   ]
 }

@@ -32,7 +32,7 @@ const column = (state = {}, action) => {
 const board = (state = { columns: [] }, action) => {
   switch (action.type) {
     case 'FETCH_BOARD_FULFILLED':
-      return action.payload.data
+      return { ...action.payload.data, columns: [...state.columns] }
     case 'FETCH_COLUMNS_FULFILLED':
       return { ...state, columns: [...action.payload.data] }
     case 'FETCH_TASKS_FULFILLED':

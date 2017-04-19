@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { DropTarget } from 'react-dnd'
 import { fetchTasks, addTask, removeTask } from '../../actions'
 import TaskPanel from '../../components/TaskPanel/index.jsx'
-import './styles.css'
+import './styles.scss'
 
 
 const columnTarget = {
@@ -28,6 +28,7 @@ class ColumnComponent extends React.Component {
 
   render() {
     const { connectDropTarget } = this.props
+    console.log('GETCHING: ', this.props.column.isFetchingTasks)
     const content = this.props.column.isFetchingTasks
       ? <span>PENDING</span>
       : this.props.column.tasks.map(task => <TaskPanel key={task.id} id={task.id} title={task.title} removeTask={this.props.removeTask} />)
