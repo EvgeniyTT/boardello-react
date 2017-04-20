@@ -100,19 +100,19 @@
   "tasks": [
     {
       "boardId": 11,
-      "columnId": 2,
+      "columnId": 1,
       "title": "newTask",
       "id": 1
     },
     {
       "boardId": 11,
-      "columnId": 3,
+      "columnId": 2,
       "title": "newTask",
       "id": 7
     },
     {
       "boardId": 11,
-      "columnId": 2,
+      "columnId": 14,
       "title": "newTask",
       "id": 8
     },

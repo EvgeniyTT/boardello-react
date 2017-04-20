@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { DragSource } from 'react-dnd'
-import './styles.css'
+import './styles.scss'
 
 
 const tasktSource = {
