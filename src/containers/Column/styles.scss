@@ -5,12 +5,16 @@
   border: solid 1px black;
   flex: 1 1 100%;
   position: relative;
-  top: 1500px;
-  transition: top 1s cubic-bezier(0.83, 1.11, 0.78, 0.95);
+
 }
 
-.up {
+.up-appear {
+  top: 700px;
+}
+
+.up-appear.up-appear-active {
   top: 0px;
+  transition: top 0.5s ease-in;
 }
 
 @for $i from 1 through 20 {

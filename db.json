@@ -106,13 +106,13 @@
     },
     {
       "boardId": 11,
-      "columnId": 2,
+      "columnId": 3,
       "title": "newTask",
       "id": 7
     },
     {
       "boardId": 11,
-      "columnId": 14,
+      "columnId": 2,
       "title": "newTask",
       "id": 8
     },
@@ -175,6 +175,18 @@
       "columnId": 6,
       "title": "newTask",
       "id": 41
+    },
+    {
+      "boardId": 11,
+      "columnId": 14,
+      "title": "newTask",
+      "id": 42
+    },
+    {
+      "boardId": 11,
+      "columnId": 2,
+      "title": "newTask",
+      "id": 43
     }
   ]
 }

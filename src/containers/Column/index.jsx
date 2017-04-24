@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 import { connect } from 'react-redux'
 import { DropTarget } from 'react-dnd'
 import { addTask, removeTask } from '../../actions'
@@ -22,27 +23,25 @@ function collect(cnct, monitor) {
 
 class ColumnComponent extends React.Component {
 
-  componentWillMount() {
-    console.log('1')
-    this.up = false
-  }
-  componentDidMount() {
-    console.log('2')
-    this.up = true
-  }
-
   render() {
     const { connectDropTarget } = this.props
 
-    this.columnClass = `column ${this.up && 'up'}`
-    console.log('3', this.columnClass)
     return connectDropTarget(
-      <div className={ this.columnClass }>
-        <span>{ this.props.column.title }</span>
-        <button onClick={ () => { this.props.addTask(this.props.boardId, this.props.column.id) } }>Add Task</button>
-        <div className="tasks">
-          { this.props.column.tasks.map(task => <TaskPanel key={task.id} id={task.id} title={task.title} removeTask={this.props.removeTask} />) }
-        </div>
+      <div>
+        <CSSTransitionGroup
+          transitionName="up"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+            <div className='column'>
+              <span>{ this.props.column.title }</span>
+              <button onClick={ () => { this.props.addTask(this.props.boardId, this.props.column.id) } }>Add Task</button>
+              <div className="tasks">
+                { this.props.column.tasks.map(task => <TaskPanel key={task.id} id={task.id} title={task.title} removeTask={this.props.removeTask} />) }
+              </div>
+            </div>
+        </CSSTransitionGroup>
       </div>
     )
   }
